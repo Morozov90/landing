@@ -218,14 +218,14 @@ body {
 .steps .row {
   display: flex;
   padding: 0 15px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 0 -15px;
   justify-content: center;
 }
 
 .steps .item {
   text-align: center;
-  width: calc(100% / 12 * 6 - 30px);
+  flex: 1 1 50%;
   margin: 15px;
 }
 
@@ -280,7 +280,7 @@ body {
 
 .recall .item {
   text-align: center;
-  width: calc(100% / 12 * 4 - 30px);
+  flex: 1 1 30%;
   margin: 2rem 15px;
 }
 
@@ -352,14 +352,14 @@ body {
 .preferences .row {
   display: flex;
   padding: 0 15px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 0 -15px;
   justify-content: center;
 }
 
 .preferences .item {
   text-align: center;
-  width: calc(100% / 12 * 6 - 30px);
+  flex: 1 1 50%;
   margin: 15px;
 }
 
@@ -436,24 +436,22 @@ body {
 
 .footer .item-1{
   text-align: left;
-  width: calc(100% / 12 * 3 - 30px);
-  margin-right: 15px;
-  margin-left: calc(100% / 12 - 30px);
+  flex: 3 1 auto;
+  margin: 0 15px ;
 }
 
 .footer .item-2{
-  width: calc(100% / 12 * 2 - 30px);
-  margin-right: 15px;
-  margin-left: calc(100% / 12 * 2 - 30px);
+  margin: 0 15px ;
+  flex: 1 1 auto;
 }
 
 .footer .item-3{
-  width: calc(100% / 12 * 2 - 30px);
+  flex: 1 1 auto;
   margin: 0 15px;
 }
 
 .footer .item-4{
-  width: calc(100% / 12 * 2 - 30px);
+  flex: 1 1 auto;
   margin: 0 15px;
 }
 
@@ -491,40 +489,20 @@ body {
   .specialist .row {
     flex-wrap: wrap;
   }
-
-  .recall .col-2 {
-    width: calc(100% / 12 * 6 - 30px);
-  }
-
-  .footer .item-1 {
-    width: calc(100% / 12 * 6 - 30px);
-    margin: 0 15px;
-  }
-
-  .footer .item-2 {
-    width: calc(100% / 12 * 6 - 30px);
-    margin: 0 15px ;
-  }
-  .footer .item-3 {
-    width: calc(100% / 12 * 6 - 30px);
-  }
-
-  .footer .item-4 {
-    width: calc(100% / 12 * 6 - 30px);
-  }
 }
 
 @media only screen and (max-width: 700px) {
-  .steps .item {
-    width: calc(100% - 30px);
+
+  .steps .row {
+    flex-wrap: wrap;
   }
 
   .header .menu__item:not(:last-child) {
     display: none;
   }
 
-  .preferences .item {
-    width: calc(100% - 30px);
+  .preferences .row {
+    flex-wrap: wrap;
   }
 
   .header .logo__scrolled {
@@ -538,34 +516,13 @@ body {
 }
 
 @media only screen and (max-width: 540px) {
-  .specialist .item {
-    width: calc(100% - 30px);
-  }
 
-  .recall .item {
-    width: calc(100% - 30px);
-  }
-
-  .footer .item-1 {
-    width: calc(100% - 30px);
-  }
-
-  .footer .item-2 {
-    width: calc(100% - 30px);
-  }
-  .footer .item-3 {
-    width: calc(100% - 30px);
-  }
-
-  .footer .item-4 {
-    width: calc(100% - 30px);
-  }
 
   .topBanner .title{
     font-size: 50pt;
   }
 
   .topBanner .subtitle{
-    font-size: 40pt;]
+    font-size: 40pt;
   }
 }
