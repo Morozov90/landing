@@ -171,14 +171,17 @@ body {
 .specialist .row {
   display: flex;
   padding: 0 15px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 0 -15px;
   justify-content: center;
 }
 
 .specialist .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  width: calc(100% / 12 * 3 - 30px);
+  flex: 1 1 auto;
   margin: 15px;
 }
 
@@ -193,6 +196,7 @@ body {
 }
 
 .specialist__itemsText {
+  margin-top: auto;
   font-size: 16pt;
 }
 
@@ -484,8 +488,8 @@ body {
     display: none;
   }
 
-  .specialist .item {
-    width: calc(100% / 12 * 6 - 30px);
+  .specialist .row {
+    flex-wrap: wrap;
   }
 
   .recall .col-2 {
